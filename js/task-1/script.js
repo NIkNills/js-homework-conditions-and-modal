@@ -18,3 +18,38 @@ if (enterYourAge >= 18) {
 } else {
   alert(`Sorry, ${enterYourName}, access denied`);
 }
+
+const enterBlockNameQuestion = confirm(
+  "Do you want to enter the name of the block?"
+);
+
+if (!enterBlockNameQuestion) {
+  console.log("Block is not assigned a class");
+} else {
+  const enterBlockName = prompt("Please, enter block name");
+  console.log(`Block name: ${enterBlockName}`);
+
+  const enterElemNameQuestion = confirm(
+    "Do you want to enter the name of the element"
+  );
+
+  if (enterElemNameQuestion) {
+    const enterElemName = prompt("Please, enter element name");
+    console.log(`Block name: ${enterBlockName}__${enterElemName}`);
+
+    const enterModifierNameQuestion = confirm(
+      "Do you want to enter the name of the modifier"
+    );
+
+    if (!enterModifierNameQuestion) {
+      console.log(`Block name: ${enterBlockName}__${enterElemName}`);
+    } else {
+      const enterModifierName = prompt("Please, enter element modifier");
+      console.log(
+        `Block name: ${enterBlockName}__${enterElemName}_${enterModifierName}`
+      );
+    }
+  } else {
+    console.log(`Block name: ${enterBlockName}`);
+  }
+}
