@@ -53,3 +53,27 @@ if (!enterBlockNameQuestion) {
     console.log(`Block name: ${enterBlockName}`);
   }
 }
+
+const div = "div",
+  plus = "plus",
+  minus = "minus",
+  mult = "mult";
+
+const enterNumberD = +prompt("Please, enter number D"),
+  enterNumberE = +prompt("Please, enter number E"),
+  selectArithmeticOperation = prompt(
+    "Select the desired arithmetic operation (div, plus, minus, mult)",
+    "plus"
+  );
+
+if (selectArithmeticOperation === div) {
+  console.log(enterNumberD / enterNumberE);
+} else if (selectArithmeticOperation === plus) {
+  console.log(enterNumberD + enterNumberE);
+} else if (selectArithmeticOperation === minus) {
+  console.log(enterNumberD - enterNumberE);
+} else if (selectArithmeticOperation === mult) {
+  console.log(enterNumberD * enterNumberE);
+} else {
+  console.log("Invalid arithmetic operation entered");
+}
